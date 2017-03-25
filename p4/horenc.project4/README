@@ -1,0 +1,61 @@
+Contents:
+    A kernel module: example.c
+    A user space testing program: p4.c
+    A makefile: Makefile
+    A shell script: jack.sh
+
+Usage: 
+1. Put everything into a folder and obeying kernel tree 
+                            (e.g. your_kernel_source/example)
+2. launch $ ./jack.sh in the folder
+3. Wait until you see "done!!!" without any error except the first time where 
+    you cannot unmount. 
+4.Simply do "$ find /mnt -name <ONE_PID_PRINTED_BY_P4>"
+5. And then react with the status and signal files by using cat or echo 10/12.
+
+Interact with
+Status files:
+    Read process status
+    $ cat /mnt/(whatever)/(whatever)(whatever)/<pid>/<pid>.status
+Signal files:
+    $ echo 10 > /mnt/(whatever)/(whatever)(whatever)/<pid>/<pid>.status
+        echo 10 to create more memmory and files for the process.
+    $ echo 12 > /mnt/(whatever)/(whatever)(whatever)/<pid>/<pid>.status
+        echo 12 will kill the process, and then do a "$ps aux| grep p4" to 
+        check the state You will see the process become a zombie process or 
+        totally removed. It depends on whether the original process is 
+        removed.
+
+Details:
+The script does:
+    Complile your module according to your Makfile, which we also provide, 
+    along with your kernel version. (We've tested it on Linux 4.0.9)
+    Compile program p4 and launch it.
+    Unmount /mnt
+    Unmod the module and remount the module 
+    Mount the pesudofs on /mnt
+    Do "ls /mnt"
+    See "done!!!"
+
+p4.c features;
+    It forks some for process in the begining.
+    Register 2 signal handlers SIGUSER1(10) and SIGUSER2(12). 
+    Repeatly deos some cpu opereations and sleep.
+
+    SIGUSER1(10) handler:
+        Allocate memory and create files.
+    SIGUSER2(12) handler:
+        Free all memory and files been created. Exit itself.
+
+Suggesting ways for testing:
+1. Read different status files from kernel and user space processes
+    $ cat /mnt/0/1/1.status
+    $ cat /mnt/0/2/2.statys
+2. See how a thread status changes during run-time
+    $ cat <pid>/<pid>.status
+    $ echo 10 > <pid>/signal
+    $ cat <pid>/<pid>.status
+    $ echo 12 > <pid>/signal
+    $ echo 10 > <pid>/signal (no longer can handler this sig in user-space)
+    $ cat <pid>/<pid>.status
+    
