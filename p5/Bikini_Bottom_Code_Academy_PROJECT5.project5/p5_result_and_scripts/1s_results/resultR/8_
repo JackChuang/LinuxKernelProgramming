@@ -1,0 +1,10 @@
+[   59.262662] deactivate_task(): pid 5603 enter time: 59070483316
+
+[   59.262671] activate_task(): pid 5603 enter time: 59070492678
+[   59.262681] pick_next_task_rt(): pid 5603 return time: 59070503111
+[   59.262684] smp_apic_timer_interrupt(): enter time: 59070505181
+[   59.262700] deactivate_task(): pid 5603 enter time: 59070521349
+
+[   60.263704] smp_apic_timer_interrupt(): enter time: 60070519170
+[   60.263713] activate_task(): pid 5603 enter time: 60070528319
+[   60.263722] pick_next_task_rt(): pid 5603 return time: 60070537285

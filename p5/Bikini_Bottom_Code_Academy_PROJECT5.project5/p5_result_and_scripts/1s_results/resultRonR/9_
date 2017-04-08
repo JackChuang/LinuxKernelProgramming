@@ -1,0 +1,17 @@
+[   68.752009] smp_apic_timer_interrupt(): enter time: 68752143478
+[   68.752422] activate_task(): pid 4812 enter time: 68752421128
+--
+[   68.752507] smp_apic_timer_interrupt(): enter time: 68752506155
+[   68.752548] deactivate_task(): pid 4812 enter time: 68752547448
+
+[   68.752555] activate_task(): pid 4812 enter time: 68752555023
+[   68.752581] pick_next_task_rt(): pid 4812 return time: 68752580194
+[   68.752595] deactivate_task(): pid 4812 enter time: 68752594888
+
+--
+[   69.752504] smp_apic_timer_interrupt(): enter time: 69752503321
+[   69.752512] activate_task(): pid 4812 enter time: 69752512078
+[   69.752520] smp_apic_timer_interrupt(): enter time: 69752519766
+--
+[   69.753367] deactivate_task(): pid 4812 enter time: 69753366275
+

@@ -1,0 +1,9 @@
+[   57.907860] deactivate_task(): pid 4760 enter time: 57907858424
+
+[   57.907867] activate_task(): pid 4760 enter time: 57907866838
+[   57.907895] pick_next_task_rt(): pid 4760 return time: 57907894717
+[   57.907953] deactivate_task(): pid 4760 enter time: 57907952201
+
+[   58.907585] smp_apic_timer_interrupt(): enter time: 58907583893
+[   58.907601] activate_task(): pid 4760 enter time: 58907600288
+[   58.907629] pick_next_task_rt(): pid 4760 return time: 58907628198

@@ -1,0 +1,15 @@
+[   52.968035] smp_apic_timer_interrupt(): enter time: 52968182395
+[   52.968347] activate_task(): pid 4734 enter time: 52968346249
+[   52.968502] smp_apic_timer_interrupt(): enter time: 52968500567
+--
+[   52.968887] pick_next_task_rt(): pid 4734 return time: 52968887074
+[   52.968897] deactivate_task(): pid 4734 enter time: 52968896807
+
+--
+[   53.968883] smp_apic_timer_interrupt(): enter time: 53968882254
+[   53.968900] activate_task(): pid 4734 enter time: 53968899348
+[   53.968929] pick_next_task_rt(): pid 4734 return time: 53968928691
+--
+[   53.969015] smp_apic_timer_interrupt(): enter time: 53969014955
+[   53.969085] deactivate_task(): pid 4734 enter time: 53969084073
+
