@@ -1,0 +1,17 @@
+Our phase2 & phase3 implementations are in prototype-serial & prototype-parallel separately. prototype-parallel is the vanilla implementation in tour report. Scripts used for geting performance data are in data_collection.
+
+---------- Project 6 Limitation List ---------- 
+MANDATORY:Cannot update an existing key with another value, cannot delete a key/value couple
+
+Pick 2 of remaining:
+>Read Latency: need to scan the entire flash -> needs indexing. True for mount time too. Also
+true for write as we need to check that we are not inserting a duplicate key
+
+>Cache in RAM (O)
+>No particular wear leveling (O)
+>Bit-flips: handled by the driver, what if block becomes bad? No bad block management
+>Only one key/value couple in a single flash page
+>Cannot write a couple with size (key+value) > flash page size
+>No concurrency (O)
+>No permissions and users management
+
